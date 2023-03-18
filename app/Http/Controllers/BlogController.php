@@ -13,8 +13,8 @@ class BlogController extends Controller
      */
     public function index()
     {
-        
-        return "blogging";
+        $blogs = Blog::get();
+        return view('blog/index', compact('blogs'));
     }
 
     /**
