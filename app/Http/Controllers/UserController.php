@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 class UserController extends Controller
 {
     function index(){
+        // process
         return "test";
     }
 }
