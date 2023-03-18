@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Blog;
 use App\Http\Requests\StoreBlogRequest;
 use App\Http\Requests\UpdateBlogRequest;
+use Illuminate\Support\Facades\Validator;
 
 class BlogController extends Controller
 {
@@ -30,13 +31,13 @@ class BlogController extends Controller
      */
     public function store(StoreBlogRequest $request)
     {   
-        // $validator = Validator::make(
-        //     $request->all(),
-        //     [
-        //         'title' => 'required|string',
-        //         'description' => 'required|string',
-        //     ]
-        //     );
+        $validator = Validator::make(
+            $request->all(),
+            [
+                'title' => 'required|string',
+                'description' => 'required|string',
+            ]
+            );
 
          Blog::create([
             'title' => $request->title,
