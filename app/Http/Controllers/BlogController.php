@@ -39,6 +39,7 @@ class BlogController extends Controller
             ]
             );
 
+            // store data
          Blog::create([
             'title' => $request->title,
             'description' => $request->description,
@@ -52,7 +53,7 @@ class BlogController extends Controller
      */
     public function show(Blog $blog)
     {
-        //
+        // 
     }
 
     /**
@@ -62,22 +63,35 @@ class BlogController extends Controller
     {
         $blog = Blog::find($id);
        
-        return "$blog";
+        return view('blog.edit', compact('blog'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateBlogRequest $request, Blog $blog)
+    public function update(UpdateBlogRequest $request, Blog $blog, $id)
     {
-        //
+        $blog = Blog::find($id);
+
+        $validator = Validator::make(
+            $request->all(),
+            [
+                'title' => 'required|string',
+                'description' => 'required|string',
+            ]
+            );
+
+        // update data
+        $blog->update($validator->validate());
+
+        return redirect()->route('blog');  
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Blog $blog)
+    public function delete(Blog $blog)
     {
-        //
+        
     }
 }

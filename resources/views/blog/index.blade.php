@@ -11,20 +11,22 @@
             <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
                 <!-- Table Design  -->
                 <table>
-                        <tr>
-                            <th>Title</th>
-                            <th>Description</th>
-                        </tr>
-                        @forelse ($blogs as $blog)
-                        <tr>
-                            <td>{{$blog->title}}</td>
-                            <td>{{$blog->description}}</td>
-                        </tr>
-                        @empty
+                    <tr>
+                        <th>No.</th>
+                        <th>Title</th>
+                        <th>Description</th>
+                    </tr>
+                    @forelse ($blogs as $blog)
+                    <tr>
+                        <td>{{$blog->id}}</td>
+                        <td>{{$blog->title}}</td>
+                        <td>{{$blog->description}}</td>
+                    </tr>
+                    @empty
 
-                        <p>no data available</p>
+                    <p>no data available</p>
 
-                        @endforelse
+                    @endforelse
                 </table>
             </div>
         </div>
