@@ -24,6 +24,9 @@
                             <td>{{$user -> email}}</td>
                         </tr>
                         @empty
+
+                        <p>no data</p>
+
                         @endforelse
                     </tbody>
                 </table>
