@@ -11,13 +11,10 @@
             <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
                 <!-- Table Design  -->
                 <table>
-                    <thead>
                         <tr>
                             <th>Name</th>
                             <th>Email</th>
                         </tr>
-                    </thead>
-                    <tbody>
                         @forelse ($users as $user)
                         <tr>
                             <td>{{$user -> name}}</td>
@@ -25,10 +22,9 @@
                         </tr>
                         @empty
 
-                        <p>no data</p>
+                        <p>no data available</p>
 
                         @endforelse
-                    </tbody>
                 </table>
             </div>
         </div>
