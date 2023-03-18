@@ -21,6 +21,10 @@ Route::get('/users', function () {
     return "test";
 });
 
+Route::get('/blogs', function () {
+    return "test";
+});
+
 
 Route::middleware([
     'auth:sanctum',
