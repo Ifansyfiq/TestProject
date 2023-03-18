@@ -32,7 +32,9 @@ Route::get('/blog/create', [BlogController::class, 'create']); //create form
 Route::post('/blog/store', [BlogController::class, 'store'])->name('blog.store'); //save to db
 Route::get('/blog/edit/{id}', [BlogController::class, 'edit']); //update form
 Route::put('/blog/update/{id}', [BlogController::class, 'update'])->name('blog.update'); //save to db (update) form  
-    
+Route::delete('/blog/delete/{id}', [BlogController::class, 'delete'])->name('blog.delete');    
+
+
 
 Route::middleware([
     'auth:sanctum',

@@ -23,6 +23,13 @@
                 <br>
                 <button type="submit">Update</button>
             </form>
+
+            <form method="POST" action="{{route('blog.delete', $blog->id)}}">
+            @csrf <!--token-->
+             @method('DELETE')
+             <button type="submit">DELETE</button>
+            </form>
+
             </div>
         </div>
     </div>

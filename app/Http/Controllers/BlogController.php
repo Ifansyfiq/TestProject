@@ -90,8 +90,13 @@ class BlogController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function delete(Blog $blog)
+    public function delete(Blog $blog, $id)
     {
+        $blog = Blog::find($id);
+
+        $blog->delete();
         
+        return redirect()->route('blog'); 
+
     }
 }
