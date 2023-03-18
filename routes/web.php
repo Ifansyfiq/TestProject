@@ -17,8 +17,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/users', function () {
-    return "test";
+Route::get('/user/{id}', function ($id) {
+    return 'user'.$id;
 });
 
 Route::get('/blogs', function () {
