@@ -23,11 +23,12 @@ Route::get('/', function () {
 //     return 'user'.$id;
 // });
 
-Route::get('/users', [UserController::class, 'index']);
+Route::get('/user', [UserController::class, 'index']);
+Route::get('/user/create', [UserController::class, 'create']);
+Route::get('/user/edit', [UserController::class, 'edit']);
 
 Route::get('/blog', [BlogController::class, 'index']);
-Route::get('/blog/create', [BlogController::class, 'create']);
-Route::get('/blog/edit', [BlogController::class, 'edit']);
+
 
 
 Route::middleware([
