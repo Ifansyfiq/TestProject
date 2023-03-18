@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInitcdbfd93fc44281ec65a6d428b24a9fc4
+class ComposerStaticInit7e8461050b01da06ac51bf687f9831af
 {
     public static $files = array (
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
@@ -340,8 +340,8 @@ class ComposerStaticInitcdbfd93fc44281ec65a6d428b24a9fc4
         ),
         'Psr\\Http\\Message\\' => 
         array (
-            0 => __DIR__ . '/..' . '/psr/http-message/src',
-            1 => __DIR__ . '/..' . '/psr/http-factory/src',
+            0 => __DIR__ . '/..' . '/psr/http-factory/src',
+            1 => __DIR__ . '/..' . '/psr/http-message/src',
         ),
         'Psr\\Http\\Client\\' => 
         array (
@@ -2427,6 +2427,7 @@ class ComposerStaticInitcdbfd93fc44281ec65a6d428b24a9fc4
         'Illuminate\\Routing\\Exceptions\\InvalidSignatureException' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Routing/Exceptions/InvalidSignatureException.php',
         'Illuminate\\Routing\\Exceptions\\StreamedResponseException' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Routing/Exceptions/StreamedResponseException.php',
         'Illuminate\\Routing\\Exceptions\\UrlGenerationException' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Routing/Exceptions/UrlGenerationException.php',
+        'Illuminate\\Routing\\FiltersControllerMiddleware' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Routing/FiltersControllerMiddleware.php',
         'Illuminate\\Routing\\ImplicitRouteBinding' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Routing/ImplicitRouteBinding.php',
         'Illuminate\\Routing\\Matching\\HostValidator' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Routing/Matching/HostValidator.php',
         'Illuminate\\Routing\\Matching\\MethodValidator' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Routing/Matching/MethodValidator.php',
@@ -2443,6 +2444,7 @@ class ComposerStaticInitcdbfd93fc44281ec65a6d428b24a9fc4
         'Illuminate\\Routing\\Pipeline' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Routing/Pipeline.php',
         'Illuminate\\Routing\\RedirectController' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Routing/RedirectController.php',
         'Illuminate\\Routing\\Redirector' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Routing/Redirector.php',
+        'Illuminate\\Routing\\ResolvesRouteDependencies' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Routing/ResolvesRouteDependencies.php',
         'Illuminate\\Routing\\ResourceRegistrar' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Routing/ResourceRegistrar.php',
         'Illuminate\\Routing\\ResponseFactory' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Routing/ResponseFactory.php',
         'Illuminate\\Routing\\Route' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Routing/Route.php',
@@ -6247,10 +6249,10 @@ class ComposerStaticInitcdbfd93fc44281ec65a6d428b24a9fc4
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInitcdbfd93fc44281ec65a6d428b24a9fc4::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInitcdbfd93fc44281ec65a6d428b24a9fc4::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInitcdbfd93fc44281ec65a6d428b24a9fc4::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInitcdbfd93fc44281ec65a6d428b24a9fc4::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit7e8461050b01da06ac51bf687f9831af::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit7e8461050b01da06ac51bf687f9831af::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInit7e8461050b01da06ac51bf687f9831af::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInit7e8461050b01da06ac51bf687f9831af::$classMap;
 
         }, null, ClassLoader::class);
     }
