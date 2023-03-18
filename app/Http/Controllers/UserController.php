@@ -9,6 +9,7 @@ class UserController extends Controller
 {
     function index(){
         // process
-        return User::get();
+        // return User::get();
+        return view('user/index');
     }
 }
