@@ -1,13 +1,35 @@
-<title>Users | homepage </title>
-<!-- {{$users}} -->
+<x-app-layout>
+    <title>Users | homepage </title>
 
-<!-- looping -->
-@forelse ($users as $user)
-    
-    {{$user->name}}
+    <x-slot name="header">
+        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+            {{ __('Users') }}
+        </h2>
+    </x-slot>
 
-@empty
+    <div class="py-12">
+        <div class="max-w   -7xl mx-auto sm:px-6 lg:px-8">
+            <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
+                <table class="table-auto">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Email</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @forelse ($users as $user)
+                        <tr>
+                            <td>{{$user -> name}}</td>
+                            <td>{{$user -> email}}</td>
+                        </tr>
+                        @empty
+                        @endforelse
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
 
-    No Users
 
-@endforelse
+</x-app-layout>
