@@ -1,6 +1,5 @@
+<title>Users | homepage </title>
 <x-app-layout>
-    <title>Users | homepage </title>
-
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
             {{ __('Users') }}
@@ -10,7 +9,8 @@
     <div class="py-12">
         <div class="max-w   -7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
-                <table class="table-auto">
+                <!-- Table Design  -->
+                <table>
                     <thead>
                         <tr>
                             <th>Name</th>
