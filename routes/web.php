@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BlogController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -24,10 +25,7 @@ Route::get('/', function () {
 
 Route::get('/users', [UserController::class, 'index']);
 
-
-Route::get('/blogs', function () {
-    return "test";
-});
+Route::get('/blog', [BlogController::class, 'index']);
 
 
 Route::middleware([
