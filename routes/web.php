@@ -31,7 +31,7 @@ Route::get('/blog', [BlogController::class, 'index'])->name('blog');
 Route::get('/blog/create', [BlogController::class, 'create']); //create form
 Route::post('/blog/store', [BlogController::class, 'store'])->name('blog.store'); //save to db
 Route::get('/blog/{id}/edit', [BlogController::class, 'edit']); //update form
-Route::post('/blog/update', [BlogController::class, 'update'])->name('blog.update'); //save to db (update) form  
+Route::post('/blog/{id}/update', [BlogController::class, 'update'])->name('blog.update'); //save to db (update) form  
     
 
 Route::middleware([

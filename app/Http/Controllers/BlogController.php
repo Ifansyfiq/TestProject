@@ -60,6 +60,9 @@ class BlogController extends Controller
      */
     public function edit(Blog $blog, $id)
     {
+        Blog::find($id);
+        dd($blog);
+        
         return "$id";
     }
 
