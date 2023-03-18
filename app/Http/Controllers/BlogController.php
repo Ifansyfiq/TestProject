@@ -58,9 +58,9 @@ class BlogController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Blog $blog)
+    public function edit(Blog $blog, $id)
     {
-        return view('user/edit');
+        return "$id";
     }
 
     /**

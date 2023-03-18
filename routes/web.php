@@ -28,9 +28,11 @@ Route::get('/user/create', [UserController::class, 'create']);
 Route::get('/user/edit', [UserController::class, 'edit']);
 
 Route::get('/blog', [BlogController::class, 'index'])->name('blog');
-Route::get('/blog/create', [BlogController::class, 'create']);
-Route::post('/blog/store', [BlogController::class, 'store'])->name('blog.store');    
-
+Route::get('/blog/create', [BlogController::class, 'create']); //create form
+Route::post('/blog/store', [BlogController::class, 'store'])->name('blog.store'); //save to db
+Route::get('/blog/{id}/edit', [BlogController::class, 'edit']); //update form
+Route::post('/blog/update', [BlogController::class, 'update'])->name('blog.update'); //save to db (update) form  
+    
 
 Route::middleware([
     'auth:sanctum',
