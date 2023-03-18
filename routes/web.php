@@ -23,11 +23,11 @@ Route::get('/', function () {
 //     return 'user'.$id;
 // });
 
-Route::get('/user', [UserController::class, 'index']);
+Route::get('/user', [UserController::class, 'index'])->name('user');
 Route::get('/user/create', [UserController::class, 'create']);
 Route::get('/user/edit', [UserController::class, 'edit']);
 
-Route::get('/blog', [BlogController::class, 'index']);
+Route::get('/blog', [BlogController::class, 'index'])->name('blog');
 Route::get('/blog/create', [BlogController::class, 'create']);
 Route::post('/blog/store', [BlogController::class, 'store'])->name('blog.store');    
 
