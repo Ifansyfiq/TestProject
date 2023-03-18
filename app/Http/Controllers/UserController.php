@@ -8,8 +8,8 @@ use Illuminate\Http\Request;
 class UserController extends Controller
 {
     function index(){
-        $name = "Irfan";
-        return view('user/index', compact('name'));
+        $users = User::get();
+        return view('user/index', compact('users'));
     }
 
     function create(){
