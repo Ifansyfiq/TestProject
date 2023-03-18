@@ -22,7 +22,7 @@ class BlogController extends Controller
      */
     public function create()
     {
-        return view('user.create');
+        return view('user/create');
     }
 
     /**
@@ -46,7 +46,7 @@ class BlogController extends Controller
      */
     public function edit(Blog $blog)
     {
-        //
+        return view('user/edit');
     }
 
     /**

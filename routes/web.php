@@ -27,7 +27,7 @@ Route::get('/users', [UserController::class, 'index']);
 
 Route::get('/blog', [BlogController::class, 'index']);
 Route::get('/blog/create', [BlogController::class, 'create']);
-Route::get('/blog', [BlogController::class, 'edit']);
+Route::get('/blog/edit', [BlogController::class, 'edit']);
 
 
 Route::middleware([

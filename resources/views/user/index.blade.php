@@ -1,1 +1,1 @@
-my view
+<title>Users | homepage </title>
